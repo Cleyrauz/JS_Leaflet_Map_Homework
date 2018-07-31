@@ -7,7 +7,7 @@ const MapWrapper = function(container, coords, zoom){
 MapWrapper.prototype.moveMap = function (coords, id) {
   document.getElementById(id).addEventListener('click',
   () => this.map.flyTo(coords, 15));
-L.marker(coords).addTo(this.map).bindPopup(`Your coordinates are ${coords}`);
+L.marker(coords).addTo(this.map).bindPopup(`Your current coordinates are ${coords}`);
 };
 MapWrapper.prototype.addMarker = function (markerCoords) {
     L.marker(markerCoords).addTo(this.map);
